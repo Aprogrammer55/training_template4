@@ -1,0 +1,151 @@
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue: hsl(217, 54%, 11%);
+    --Very-dark-blue2: hsl(216, 50%, 16%);
+    --Very-dark-blue3: hsl(215, 32%, 27%);
+}
+
+.body {
+    font-family: 'Outfit', sans-serif;
+}
+
+p {
+    font-size: 18px;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Very-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page .container {
+    width: 250px;
+    height: 450px;
+    background-color: var(--Very-dark-blue2);
+    border-radius: 10px;
+}
+
+.page .container .image {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.page .container .image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    z-index: 100;
+}
+
+.page .container .image .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.page .container .image .space .cover {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.page .container .image .space:hover .cover {
+    background-color: var(--Cyan);
+    opacity: .2;
+}
+
+.page .container .image .space:hover .icon {
+    opacity: 1;
+}
+
+.page .container .content {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.page .container .content .text h3 {
+    color: var(--White);
+    font-weight: 400;
+}
+
+.page .container .content .text h3:hover {
+    cursor: pointer;
+    color: var(--Cyan);
+}
+
+.page .container .content .text p {
+    color: var(--Soft-blue);
+}
+
+.page .container .content .worth {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--Very-dark-blue3);
+    padding-bottom: 14px;
+}
+
+.page .container .content .worth .money {
+    position: relative;
+    color: var(--Cyan);
+}
+
+.page .container .content .worth .money span,
+.page .container .content .worth .time span {
+    font-size: 16px;
+    top: -3px;
+    position: relative;
+}
+
+.page .container .content .worth .time span {
+    color: var(--Soft-blue);
+}
+
+.page .container .content .user {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.page .container .content .user img {
+    width: 32px;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+}
+
+.page .container .content .user span {
+    color: var(--Soft-blue);
+    margin-right: -3px;
+    font-size: 15px;
+}
+
+.page .container .content .user a {
+    text-decoration: none;
+    color: var(--White);
+    font-size: 15px;
+}
+
+.page .container .content .user a:hover {
+    color: var(--Cyan);
+}
